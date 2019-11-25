@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
 })
 
 export class tranList{
-
+  transactions = [
+    {value:"1500", description:"fizetés"},
+    {value:"-100", description:"kaja"},
+    {value:"-1500", description:"lakbér"},
+    {value:"1500", description:"maszek"},
+    {value:"-500", description:"rezsi"},
+  ]
 }
