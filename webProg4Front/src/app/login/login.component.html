@@ -6,7 +6,7 @@
 <mat-form-field>
   <input matInput type="password" placeholder="jelszó" [(ngModel)]="enterdPassword">
 </mat-form-field>
+<p>{{loggendIn}}</p>
 
-
-  <button mat-stroked-button color='primary'>Belépés</button>
+  <button mat-stroked-button color='primary' (click)='onRegister()'>Belépés</button>
 
