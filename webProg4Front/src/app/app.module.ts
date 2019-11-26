@@ -7,6 +7,7 @@ import { tranList } from './tranList/tranList.component';
 import { profile } from './profile/profile.component';
 import { header } from './header/header.component';
 import {HttpClientModule} from '@angular/common/http';
+import { apiService } from './api.service';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,7 +36,9 @@ import { MatInputModule, MatButtonModule, MatToolbarModule, MatExpansionModule  
     MatExpansionModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    apiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 
-export class DataService {
+export class apiService {
 
   private url = 'http://localhost:8080';
 
