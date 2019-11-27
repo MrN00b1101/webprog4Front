@@ -1,5 +1,35 @@
 <app-header></app-header>
 <main>
-<app-login></app-login>
-<app-tranList></app-tranList>
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Bejelentkezés
+      </mat-expansion-panel-header>
+      <app-login></app-login>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+              Tranzakció hozzáadása
+            </mat-expansion-panel-header>
+            <app-tranAdd></app-tranAdd>
+        </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+            Tranzakciók
+          </mat-expansion-panel-header>
+          <app-tranList></app-tranList>
+    </mat-expansion-panel>
+
+
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        Regisztráció
+      </mat-expansion-panel-header>
+      <app-register></app-register>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+
 <main>
