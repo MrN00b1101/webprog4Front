@@ -17,7 +17,6 @@ export class login {
   public onRegister() {
     this.user = {username: this.enterdUserName, pass: this.enterdPassword};
     this.apiService.postLogin(this.user).subscribe((response) => {
-    //this.loggendIn = response;
-    });
+    this.loggendIn = response;});
   }
 }
