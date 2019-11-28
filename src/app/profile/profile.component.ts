@@ -14,7 +14,7 @@ export class profile{
     public onLogout() {
 
       this.apiService.getLogout().subscribe((response) => {
-      this.ress = response.toString();
+      sessionStorage.clear();
 
 
       });

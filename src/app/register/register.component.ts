@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {apiService} from '../api.service';
 import {User} from '../user';
+import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-register',
@@ -17,6 +18,9 @@ export class register {
   public onRegister() {
     this.user = {username: this.enterdRegisterUserName, pass: this.enterdRegisterPassword};
     this.registered = this.apiService.postRegister(this.user);
+    this.enterdRegisterPassword = '';
+    this.enterdRegisterUserName = '';
+    this.registered ="Sikeres regisztráció";
   }
 
 }
