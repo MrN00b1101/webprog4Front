@@ -1,4 +1,7 @@
 import { Component, OnInit} from '@angular/core';
+import { Transaction } from '../transaction';
+import {loggedIn} from '../logged.service';
+import {apiService} from '../api.service';
 
 @Component({
   selector: 'app-tranList',
@@ -6,14 +9,18 @@ import { Component, OnInit} from '@angular/core';
 })
 
 export class tranList implements OnInit{
-  transactions = [
-    {value:"1500", description:"fizetés"},
-    {value:"-100", description:"kaja"},
-    {value:"-1500", description:"lakbér"},
-    {value:"1500", description:"maszek"},
-    {value:"-500", description:"rezsi"},
-  ]
-  ngOnInit(){
+  transactions = [];
+  any = '';
+  constructor(
+    private loggedIn: loggedIn,
+    private apiService: apiService) { }
+  ngOnInit() {
+    
+    this.apiService.getTranList(this.loggedIn.get()).subscribe((response) => {
+      this.transactions = JSON.parse(JSON.stringify(response));
+      
 
+
+    });
   }
 }

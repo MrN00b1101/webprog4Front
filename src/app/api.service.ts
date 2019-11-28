@@ -36,8 +36,10 @@ export class apiService {
   getLogout(){
     return this.httpClient.get(this.url + '/logout');
   }
-  public getTranList() {
-    return this.httpClient.get(this.url + '/transactions');
+  public getTranList(user: string) {
+    var userr = {'username' : user};
+    return this.httpClient.post<string>(this.url + '/tranList',userr
+    );
   }
   public postTran(transaction: Transaction) {
     return this.httpClient.post<Transaction>(this.url + '/transactions', transaction, {

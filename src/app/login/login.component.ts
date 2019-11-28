@@ -15,7 +15,7 @@ export class login {
 
   enterdUserName = '';
   enterdPassword = '';
-  user:User;
+  user: User;
   loggedUser: User;
   public onLogin() {
     this.user = {username: this.enterdUserName, pass: this.enterdPassword};
