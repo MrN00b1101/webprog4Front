@@ -7,5 +7,5 @@
       <input matInput type="text" placeholder="Megnevezés" [(ngModel)]="enterdDescription">
     </mat-form-field>
 
-
-    <button mat-stroked-button color='primary'>Hozzáadás</button>
+    {{ result }}
+    <button mat-stroked-button color='primary' (click)='onAdd()'>Hozzáadás</button>

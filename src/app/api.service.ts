@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable, observable } from 'rxjs';
 import { User } from './user';
+import { Transaction } from './transaction';
 
 
 @Injectable({
@@ -34,14 +35,12 @@ export class apiService {
   }
   getLogout(){
     return this.httpClient.get(this.url + '/logout');
-
-
   }
   public getTranList() {
     return this.httpClient.get(this.url + '/transactions');
   }
-  public postTran(obj) {
-    return this.httpClient.post(this.url + '/transactions', obj, {
+  public postTran(transaction: Transaction) {
+    return this.httpClient.post<Transaction>(this.url + '/transactions', transaction, {
       headers: new HttpHeaders({'Content-Type':  'application/json', })
     });
   }

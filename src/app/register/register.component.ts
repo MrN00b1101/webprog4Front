@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {apiService} from '../api.service';
 import {User} from '../user';
-import { timingSafeEqual } from 'crypto';
 
 @Component({
   selector: 'app-register',
